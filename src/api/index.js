@@ -1,4 +1,3 @@
-import { version } from '../../package.json';
 import { Router } from 'express';
 import mathjax from './v1/mathjax';
 
@@ -10,7 +9,7 @@ export default () => {
 
 	// perhaps expose some API metadata at the root
 	api.get('/', (req, res) => {
-		res.json({ version });
+		res.render('Its Work!');
 	});
 
 	return api;
